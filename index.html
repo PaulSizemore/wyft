@@ -1,0 +1,171 @@
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+<title>Glow Map</title>
+<link href="https://cdn.mapfit.com/v2-3/assets/css/mapfit.css" rel='stylesheet' />
+<link href='http://fonts.googleapis.com/css?family=Lato:300,400,300italic,400italic' rel='stylesheet' type='text/css'>
+<link href='http://fonts.googleapis.com/css?family=Montserrat:400,700' rel='stylesheet' type='text/css'> 
+<!-- Global CSS -->
+<link rel="stylesheet" href="assets/plugins/bootstrap/css/bootstrap.min.css">   
+<!-- Plugins CSS -->
+<link rel="stylesheet" href="assets/plugins/font-awesome/css/font-awesome.css">
+<!-- Theme CSS -->  
+<link id="theme-style" rel="stylesheet" href="assets/css/styles.css">
+<!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+<!--[if lt IE 9]>
+<script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+<script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+<![endif]-->
+</head>
+
+
+<body>
+    <div id="mapfit" style="width: 100%; height: 40%;"></div>
+
+
+
+
+
+
+
+
+
+
+
+
+    <!-- Section TWO --> <!-- Section TWO --> <!-- Section TWO --> <!-- Section TWO --> <!-- Section TWO --> 
+<section class="about section">
+<div class="section-inner">
+<!--    <h2 class="heading">About Me</h2>-->
+<div class="content">
+<p>HORIZONTAL INTERFERENCE</p>
+<div id="myHumanaCarousel" class="carousel slide" data-ride="">
+<!-- Wrapper for slides -->
+<div class="carousel-inner">
+<div class="item active">
+<img src="3.png" alt="" >
+</div>
+<div class="item">
+<img src="2.png" alt="">
+</div>
+<div class="item">
+<img src="1.png" alt="">
+</div>
+</div>
+<!-- Left and right controls -->
+<a class="left carousel-control" href="#myHumanaCarousel" data-slide="prev">
+<span class="glyphicon glyphicon-chevron-left"></span>
+<span class="sr-only">Previous</span>
+</a>
+<a class="right carousel-control" href="#myHumanaCarousel" data-slide="next">
+<span class="glyphicon glyphicon-chevron-right"></span>
+<span class="sr-only">Next</span>
+</a>
+</div>
+
+<p>Joachim Sługocki and Katarzyna Malejka, Poland<br>LOCATION: WASHINGTON HARBOUR (3000 K STREET)<br><em>Horizontal Interference</em> is formed by a colorful cord structure which connects trees and light poles in a simple manner. The extraordinary architecture of wires, which in itself is beautiful at daylight, turns into a spectacular beauty at nightfall. The stretched UV tape soaks up the night. Using existing architecture, this brings a renewed sense of our surroundings.
+<BR>CONNECT WITH <a target="_blank" href="https://www.facebook.com/joachimslugocki">KATARINA AND JOACHIM</a>
+</p>
+
+
+</div><!--//content-->
+</div><!--//section-inner-->                 
+</section><!--//section-->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- Javascript -->          
+<script type="text/javascript" src="assets/plugins/jquery-1.11.3.min.js"></script>
+<script type="text/javascript" src="assets/plugins/bootstrap/js/bootstrap.min.js"></script>    
+<script type="text/javascript" src="assets/plugins/jquery-rss/dist/jquery.rss.min.js"></script> 
+<!-- custom js -->
+<script type="text/javascript" src="assets/js/main.js"></script>           
+
+<script src="https://cdn.mapfit.com/v2-3/assets/js/tetragon.js"></script>
+<script src="https://cdn.mapfit.com/v2-3/assets/js/mapfit.js"></script>
+<script>
+// create map
+let map = mapfit.MapView('mapfit', {theme: 'night'});
+
+let one = mapfit.Marker([38.9023638,-77.05973619999997]);
+let two = mapfit.Marker([38.902393,-77.0627457]);
+let three = mapfit.Marker([38.903633,-77.06252569999998]);
+let four = mapfit.Marker([38.9040775,-77.06344039999999]);
+let five = mapfit.Marker([38.904877,-77.06502560000001]);
+let six = mapfit.Marker([38.9046609,-77.0665491]);
+let seven = mapfit.Marker([38.9052025,-77.0674985]);
+let eight = mapfit.Marker([38.9078449,-77.0634887]);
+let ninea = mapfit.Marker([38.9100281,-77.06482570000003]);
+let nineb = mapfit.Marker([38.9116144,-77.06528300000002]);
+let ninec = mapfit.Marker([38.9114724,-77.06580880000001]);
+
+
+//let moma = mapfit.Marker([38.903504, -77.0216268]);
+//let mad = mapfit.Marker([38.9101153, -77.0381296]);
+//    let moma = mapfit.Marker([40.7620952,-73.9794267]);
+//    let mad = mapfit.Marker([40.7634685,-73.9812614]);
+
+let glow = mapfit.Layer();
+glow.add(one);
+glow.add(two);
+glow.add(three);
+glow.add(four);
+glow.add(five);
+glow.add(six);
+glow.add(seven);
+glow.add(eight);
+glow.add(ninea);
+glow.add(nineb);
+glow.add(ninec);
+
+map.addMarker(one);
+map.addMarker(two);
+map.addMarker(three);
+map.addMarker(four);
+map.addMarker(five);
+map.addMarker(six);
+map.addMarker(seven);
+map.addMarker(eight);
+map.addMarker(ninea);
+map.addMarker(nineb);
+map.addMarker(ninec);
+
+map.addLayer(glow);
+map.setCenterWithLayer(glow, 60, 60); 
+</script>
+
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-1575209-58"></script>
+<script>  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'UA-1575209-58');
+</script>
+
+</body>
+</html>
